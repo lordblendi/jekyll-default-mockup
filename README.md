@@ -4,6 +4,15 @@ From now on we use Jekyll for our mockups as this supports both SASS and Github 
 
 The base file for the whole application is called `home.html` and located in the `_layouts` folder.
 
+## How to install Jekyll
+
+Follow the guideline on the website.
+- [Linux](https://jekyllrb.com/docs/installation/)
+- [Windows](https://jekyllrb.com/docs/windows/#installation-via-rubyinstaller)
+  - Problem with mingw32 can be solved with `bundle update && bundle install`
+
+To read on Liquid check [their website.](https://shopify.github.io/liquid/)
+
 ## How to include new html files
 
 Create your html files in the `_includes` folder; You can include them in an .html file with the following command:
