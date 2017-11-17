@@ -4,7 +4,11 @@
 
   <body>
     <h1>hello</h1>
+    Image from url via styling: <br/>
+    <div class="cover"></div>
 
+    Image from asset: <br/>
+    <img src="{{ '/assets/images/files.jpg' | relative_url}}"/>
     {% include js_files.html %}
   </body>
 </html>

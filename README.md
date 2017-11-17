@@ -57,7 +57,7 @@ Example is in `test.js`.
 
 ## How to add a new subpage
 
-Add a new html file in the `pages` folder. It has to start like this:
+Add a new html file in the `pages` folder. Example is in `pages/example.html`. It has to start like this:
 ```
 ---
 permalink: /name-of-your-link
@@ -66,10 +66,31 @@ permalink: /name-of-your-link
 <!-- content of your html file-->
 ```
 
-If you want it to have a default look, you can add the `_layouts/page.html` layout to it, that includes the header and the js files.
+If you want it to have a default look, you can add the `_layouts/page.html` layout to it, that includes the header and the js files. Example is in `pages/example_with_layout.html`.
 ```
 ---
 permalink: /name-of-your-link
 layout: page
 ---
 ```
+
+## How to add an image
+
+Images are stored in the `assets/images` folder. Adding them with inline html:
+
+``` html
+<img src="{{ '/assets/images/files.jpg' | relative_url}}"/>
+```
+
+Adding them via sass:
+``` html
+<div class="cover"></div>
+```
+```css
+.cover {
+  background-image:url('../assets/images/roadwork.jpg');
+  height: 100px;
+}
+```
+
+Examples are in `_layouts/home.html` and `sass/image.scss`.
