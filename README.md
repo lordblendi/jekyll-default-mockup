@@ -134,7 +134,7 @@ Fonts are stored in the `assets/fonts` folder. Example for import is in `sass/fo
 }
 ```
 
-Example usage is in `_layouts/home.html` and `sass/defaul.scss`.
+Example usage is in `_layouts/home.html` and `sass/default.scss`.
 ```html
 <i class="icon__account"></i>
 ```
