@@ -94,3 +94,32 @@ Adding them via sass:
 ```
 
 Examples are in `_layouts/home.html` and `sass/image.scss`.
+
+## How to add custom font
+
+Fonts are stored in the `assets/fonts` folder.
+
+Example for import is in `sass/font-icons.scss`
+```css
+@font-face {
+	font-family: 'pmx';
+	src:url('../assets/fonts/pmx.eot?8b80t1');
+	src:url('../assets/fonts/pmx.eot?8b80t1#iefix') format('embedded-opentype'),
+		url('../assets/fonts/pmx.ttf?8b80t1') format('truetype'),
+		url('../assets/fonts/pmx.woff?8b80t1') format('woff'),
+		url('../assets/fonts/pmx.svg?8b80t1#pmx') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+```
+
+Example usage is in `_layouts/home.html` and `sass/defaul.scss`.
+```html
+<i class="icon__account"></i>
+```
+```css
+.icon__account:before {
+  content: '\e074';
+  font-family: 'pmx';
+}
+```

@@ -3,7 +3,13 @@
 
 body {
   color: blue;
+
   h1 {
     color: green;
+
+    .icon__account:before {
+      content: '\e074';
+      font-family: 'pmx';
+    }
   }
 }
