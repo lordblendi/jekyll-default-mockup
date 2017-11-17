@@ -54,3 +54,22 @@ In the `scripts` folder simply add a new js file. To include it, modify the `_in
 ```
 
 Example is in `test.js`.
+
+## How to add a new subpage
+
+Add a new html file in the `pages` folder. It has to start like this:
+```
+---
+permalink: /name-of-your-link
+---
+
+<!-- content of your html file-->
+```
+
+If you want it to have a default look, you can add the `_layouts/page.html` layout to it, that includes the header and the js files.
+```
+---
+permalink: /name-of-your-link
+layout: page
+---
+```
