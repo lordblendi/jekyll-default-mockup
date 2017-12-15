@@ -10,5 +10,14 @@
     Image from asset: <br/>
     <img src="{{ '/assets/images/files.jpg' | relative_url}}"/>
     {% include js_files.html %}
+
+
+    For loop
+    {% for i in (1..5) %}
+      <h1>loop {{i}}</h1>
+      {% include loop-file.html
+        item=i
+      %}
+    {% endfor %}
   </body>
 </html>

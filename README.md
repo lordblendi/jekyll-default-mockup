@@ -40,6 +40,33 @@ Create your html files in the `_includes` folder; You can include them in an .ht
 
 I've already created a default `head.html` and `js_files.html`.
 
+### Using attributes in included html files
+
+Send down with `attributename=value`. Example in `home.html`.
+```html
+{% include loop-file.html item=i %}
+```
+
+You can get it from the `include` block.  Example in `loop-file.html`.
+```html
+<h2>{{include.item}} header</h2>
+```
+
+### For loop
+
+Syntax: `{% for i in (first..last) %}` `First` is the first value of the `i` and last is the `last`. `first <= i <= last`. It doesn't have to start from 0 or 1.
+
+```html
+{% for i in (1..5) %}
+  <h1>loop {{i}}</h1>
+  {% include loop-file.html
+    item=i
+  %}
+{% endfor %}
+```
+
+You can use `{{i}}` to get the value inside the for. Or simply send it down into an include block with `attributename=i`.
+
 ## How to add a new sass file:
 
 In the `sass` folder simply add a new `name.scss`. For Jekyll it is **important** to start the file like this:
